@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kendaraan | Rentify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Rentify.</a>
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="index.html" class="hover:text-blue-600">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-blue-600">Tentang</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-blue-600">Kendaraan</a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-lg p-3 space-y-2">
+                        <li><a href="mobil.html" target="_blank" class="block hover:text-blue-600">Mobil</a></li>
+                        <li><a href="motor.html" target="_blank" class="block hover:text-blue-600">Motor</a></li>
+                        <li><a href="sepeda.html" target="_blank" class="block hover:text-blue-600">Sepeda</a></li>
+                    </ul>
+                </li>
+                <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Kontak</a></li>
+            </ul>
+            <div class="hidden md:flex space-x-4">
+                <a href="login.html" target="_blank"
+                    class="px-4 py-2 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Login</a>
+                <a href="register.html" target="_blank"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Daftar</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <section class="bg-[url('assets/kendaraanbg.jpg')] bg-cover bg-center h-72 flex items-center justify-center">
+        <div
+            class="bg-white/30 backdrop-blur-md border border-white/40 rounded-2xl p-6 flex flex-col md:flex-row gap-4 items-center w-11/12 md:w-3/4 shadow-lg">
+            <input type="text" id="searchInput" placeholder="Cari kendaraan atau lokasi sewa..."
+                class="flex-1 px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none">
+            <select id="vehicleType" class="px-4 py-3 rounded-lg border border-gray-300">
+                <option value="Semua">Semua</option>
+                <option value="Mobil">Mobil</option>
+                <option value="Motor">Motor</option>
+                <option value="Sepeda">Sepeda</option>
+            </select>
+            <button id="searchBtn"
+                class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">Cari</button>
+        </div>
+    </section>
+
+    <!-- Main Section -->
+    <main class="max-w-7xl mx-auto px-6 mt-10 flex flex-col md:flex-row gap-8">
+
+        <!-- Sidebar Filter -->
+        <aside class="w-full md:w-1/4 bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-lg font-bold mb-4">Kamu Mau Nyari Apa?</h2>
+
+            <div class="space-y-5">
+                <div>
+                    <label class="block text-sm font-medium mb-2">Jenis Kendaraan</label>
+                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option>Semua</option>
+                        <option>Mobil</option>
+                        <option>Motor</option>
+                        <option>Sepeda</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Merk</label>
+                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option>Semua</option>
+                        <option>Honda</option>
+                        <option>Toyota</option>
+                        <option>Mitsubishi</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Kapasitas</label>
+                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option>2 Orang</option>
+                        <option>4 Orang</option>
+                        <option>6 Orang</option>
+                        <option>8 Orang</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Harga per Hari</label>
+                    <input type="range" min="100" max="1000" class="w-full" />
+                    <div class="flex justify-between text-sm text-gray-600 mt-1">
+                        <span>Rp100k</span><span>Rp1jt</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium mb-2">Rating</label>
+                    <select class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        <option>Semua</option>
+                        <option>⭐ 5</option>
+                        <option>⭐ 4 ke atas</option>
+                        <option>⭐ 3 ke atas</option>
+                    </select>
+                </div>
+
+                <button
+                    class="w-full mt-4 bg-yellow-400 text-white py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">Filter
+                    Results</button>
+                <button
+                    class="w-full mt-2 border border-red-400 text-red-500 py-2 rounded-lg hover:bg-red-50 transition">Clear
+                    All</button>
+            </div>
+        </aside>
+
+        <!-- List Kendaraan -->
+        <section class="flex-1">
+            <div class="flex justify-between items-center mb-6">
+                <p class="text-sm text-gray-700">Menampilkan <strong>1–9</strong> dari <strong>123</strong> Kendaraan
+                </p>
+                <div class="flex gap-3">
+                    <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                        <option>Terbaru</option>
+                        <option>Termurah</option>
+                        <option>Terpopuler</option>
+                    </select>
+                    <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                        <option>9</option>
+                        <option>18</option>
+                        <option>30</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+                    <img src="assets/civic.png"
+                        class="rounded-lg w-full h-40 object-cover mb-3" />
+                    <h3 class="font-semibold text-lg">Honda Civic</h3>
+                    <p class="text-sm text-gray-600">Sedan • Automatic • AC</p>
+                    <p class="mt-2 font-bold text-blue-600">Rp800k /hari</p>
+                    <a href="detail.html?nama=Honda%20Civic&harga=800k&jenis=Sedan&transmisi=Automatic"
+                        class="w-full mt-3 block text-center bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition">Sewa</a>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+                    <img src="assets/alphard.png"
+                        class="rounded-lg w-full h-40 object-cover mb-3" />
+                    <h3 class="font-semibold text-lg">Toyota Alphard</h3>
+                    <p class="text-sm text-gray-600">MPV • Automatic • AC</p>
+                    <p class="mt-2 font-bold text-blue-600">Rp2,5jt /hari</p>
+                    <a href="detail.html?nama=Toyota%20Alphard&harga=2,5jt&jenis=MPV&transmisi=Automatic"
+                        class="w-full mt-3 block text-center bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition">
+                        Sewa
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
+                    <img src="assets/xpander.png"
+                        class="rounded-lg w-full h-40 object-cover mb-3" />
+                    <h3 class="font-semibold text-lg">Mitsubishi Xpander</h3>
+                    <p class="text-sm text-gray-600">SUV • Automatic • AC</p>
+                    <p class="mt-2 font-bold text-blue-600">Rp400k /hari</p>
+                    <a href="detail.html?nama=Mitsubishi%20Xpander&harga=400k&jenis=SUV&transmisi=Automatic"
+                        class="w-full mt-3 block text-center bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition">
+                        Sewa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gradient-to-b from-blue-700 via-blue-800 to-blue-900 text-white py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Rentify</h2>
+                <p class="text-sm mb-1">Customer Support:</p>
+                <p class="text-yellow-400 font-semibold mb-4">(62) 555-7777</p>
+                <p class="text-sm mb-1">Jl. Halimun, Setiabudi, Jakarta Selatan.</p>
+                <a href="mailto:info@rental.com" class="text-sm hover:underline">info@rental.com</a>
+    
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fas fa-globe text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube text-lg"></i></a>
+                </div>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Perusahaan</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Tentang kami</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                    <li><a href="#" class="hover:underline">Kontak</a></li>
+                    <li><a href="#" class="hover:underline">Harga</a></li>
+                    <li><a href="#" class="hover:underline">Testimoni</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Support</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Help center</a></li>
+                    <li><a href="#" class="hover:underline">Terms of service</a></li>
+                    <li><a href="#" class="hover:underline">Legal</a></li>
+                    <li><a href="#" class="hover:underline">Privacy policy</a></li>
+                    <li><a href="#" class="hover:underline">Status</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Stay up to date</h3>
+                <form class="relative">
+                    <input type="email" placeholder="Your email address" class="w-full px-5 py-3 pr-14 bg-white/20 backdrop-blur-md border border-white/40
+                        rounded-full text-white placeholder-white/80 focus:outline-none focus:ring-2
+                        focus:ring-white/70 transition" />
+                    <button type="submit" class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-white/30
+                        hover:bg-white/50 backdrop-blur-md rounded-r-full transition">
+                        <img src="assets/icon-send.png" alt="Send" class="w-5 h-5 brightness-0 invert">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konfirmasi Sewa - Rentify</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Rentify</h1>
+            <ul class="hidden md:flex gap-8 text-gray-700">
+                <li><a href="index.html" class="hover:text-blue-600">Beranda</a></li>
+                <li><a href="#" class="hover:text-blue-600">Tentang</a></li>
+                <li><a href="kendaraan.html" class="hover:text-blue-600">Kendaraan</a></li>
+                <li><a href="#" class="hover:text-blue-600">Testimoni</a></li>
+            </ul>
+            <div class="flex gap-4">
+                <a href="login.html" class="text-gray-700 hover:text-blue-600">Sign In</a>
+                <a href="registrasi.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Sign
+                    Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <div class="mt-20 relative">
+        <img src="assets/carbg.jpg"
+            alt="Rentify Konfirmasi" class="w-full h-64 object-cover">
+        <h2
+            class="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white bg-black bg-opacity-40">
+            Sewa Kendaraan
+        </h2>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-10">
+
+        <!-- Step Indicator -->
+        <div class="flex items-center justify-center gap-6 mb-12">
+            <div class="flex flex-col items-center opacity-50">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">1</div>
+                <p class="text-sm mt-2">Lokasi & Waktu</p>
+            </div>
+            <div class="h-[2px] w-16 bg-gray-300"></div>
+            <div class="flex flex-col items-center opacity-50">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">2</div>
+                <p class="text-sm mt-2">Detail</p>
+            </div>
+            <div class="h-[2px] w-16 bg-gray-300"></div>
+            <div class="flex flex-col items-center opacity-50">
+                <div class="w-10 h-10 flex items-center justify-center bg-gray-200 text-gray-600 rounded-full">3</div>
+                <p class="text-sm mt-2">Checkout</p>
+            </div>
+            <div class="h-[2px] w-16 bg-gray-300"></div>
+            <div class="flex flex-col items-center">
+                <div class="w-10 h-10 flex items-center justify-center bg-green-500 text-white rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                </div>
+                <p class="text-sm mt-2 font-semibold text-green-600">Konfirmasi</p>
+            </div>
+        </div>
+
+        <!-- Confirmation Message -->
+        <div class="text-center mb-10">
+            <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="white"
+                    class="w-7 h-7">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800">Terima kasih! Pesananmu Telah Diterima</h3>
+            <p class="text-gray-600">Nomor Pesanan : <span class="text-orange-500 font-semibold">#123456</span></p>
+        </div>
+
+        <!-- Detail Card -->
+        <div class="bg-white shadow rounded-2xl p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Kiri -->
+            <div>
+                <div class="flex items-center gap-4 mb-4">
+                    <img src="assets/civic.png"
+                        alt="Honda Civic" class="w-24 rounded-lg">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">Honda Civic</h4>
+                        <p class="text-sm text-gray-500">Lokasi: Setiabudi, Jakarta Selatan</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4 mb-4">
+                    <h5 class="font-semibold text-gray-700 mb-3">Harga Mobil</h5>
+                    <div class="text-sm space-y-1">
+                        <div class="flex justify-between"><span>Tarif Sewa (1 day)</span><span>Rp800k</span></div>
+                        <div class="flex justify-between"><span>Ongkos Pengiriman</span><span>Rp50k</span></div>
+                        <div class="border-t border-gray-200 my-2"></div>
+                        <div class="flex justify-between font-semibold"><span>Total</span><span>Rp850k</span></div>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <h5 class="font-semibold text-gray-700 mb-3">Info Pembayaran</h5>
+                    <p class="text-sm text-gray-700">Maal Watterson</p>
+                    <p class="text-sm text-gray-700">2 Penumpang, 1 Anak</p>
+                    <p class="text-sm text-gray-700">Jl. Sultan Syahrir, Pd Aren, Tangerang Selatan</p>
+                    <p class="text-sm text-gray-700">+62 877-7777</p>
+                    <p class="text-sm text-gray-700">nnesa@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Kanan -->
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <h5 class="font-semibold text-gray-700 mb-3">Lokasi & Waktu</h5>
+                    <p class="text-sm"><span class="font-semibold">Penyewaan:</span> Delivery</p>
+                    <p class="text-sm"><span class="font-semibold">Tipe Rental:</span> Perhari</p>
+                    <div class="mt-2">
+                        <p class="text-sm text-gray-600 font-semibold">Lokasi & Waktu Pengantaran</p>
+                        <p class="text-sm text-gray-700">Jl. Sultan Syahrir, Pd Aren, Tangerang Selatan</p>
+                        <p class="text-sm text-gray-500">07/07/2025 - 07:00</p>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-sm text-gray-600 font-semibold">Lokasi & Waktu Pengembalian</p>
+                        <p class="text-sm text-gray-700">Setiabudi, Jakarta Selatan</p>
+                        <p class="text-sm text-gray-500">07/08/2025 - 19:00</p>
+                    </div>
+                </div>
+
+                <div class="border border-gray-200 rounded-lg p-4">
+                    <h5 class="font-semibold text-gray-700 mb-3">Detail Pembayaran</h5>
+                    <p class="text-sm"><span class="font-semibold">Metode Pembayaran:</span> Kartu Debit</p>
+                    <p class="text-sm"><span class="font-semibold">Transaction ID:</span> <a href="#"
+                            class="text-blue-600 hover:underline">#124564564564</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex justify-center gap-4 mt-10">
+            <button onclick="window.print()" class="px-6 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800">
+                Print
+            </button>
+            <a href="index.html" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                Kembali ke Beranda
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-700 via-blue-800 to-blue-900 text-white py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Rentify</h2>
+                <p class="text-sm mb-1">Customer Support:</p>
+                <p class="text-yellow-400 font-semibold mb-4">(62) 555-7777</p>
+                <p class="text-sm mb-1">Jl. Halimun, Setiabudi, Jakarta Selatan.</p>
+                <a href="mailto:info@rental.com" class="text-sm hover:underline">info@rental.com</a>
+    
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fas fa-globe text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube text-lg"></i></a>
+                </div>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Perusahaan</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Tentang kami</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                    <li><a href="#" class="hover:underline">Kontak</a></li>
+                    <li><a href="#" class="hover:underline">Harga</a></li>
+                    <li><a href="#" class="hover:underline">Testimoni</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Support</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Help center</a></li>
+                    <li><a href="#" class="hover:underline">Terms of service</a></li>
+                    <li><a href="#" class="hover:underline">Legal</a></li>
+                    <li><a href="#" class="hover:underline">Privacy policy</a></li>
+                    <li><a href="#" class="hover:underline">Status</a></li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Stay up to date</h3>
+                <form class="relative">
+                    <input type="email" placeholder="Your email address" class="w-full px-5 py-3 pr-14 bg-white/20 backdrop-blur-md border border-white/40
+                        rounded-full text-white placeholder-white/80 focus:outline-none focus:ring-2
+                        focus:ring-white/70 transition" />
+                    <button type="submit" class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-white/30
+                        hover:bg-white/50 backdrop-blur-md rounded-r-full transition">
+                        <img src="assets/icon-send.png" alt="Send" class="w-5 h-5 brightness-0 invert">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental & Sewa Mobil, Motor, dan Sepeda | Rentify.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* Animasi ringan */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.7s ease-out;
+        }
+
+        .fade-up.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <a href="index.html" class="text-2xl font-bold text-blue-600">Rentify.</a>
+            <ul class="hidden md:flex space-x-8 font-medium">
+                <li><a href="index.html" class="hover:text-blue-600">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-blue-600">Tentang</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-blue-600">Kendaraan</a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2 rounded-lg p-3 space-y-2">
+                        <li><a href="mobil.html" target="_blank" class="block hover:text-blue-600">Mobil</a></li>
+                        <li><a href="motor.html" target="_blank" class="block hover:text-blue-600">Motor</a></li>
+                        <li><a href="sepeda.html" target="_blank" class="block hover:text-blue-600">Sepeda</a></li>
+                    </ul>
+                </li>
+                <li><a href="#faq" class="hover:text-blue-600">FAQ</a></li>
+                <li><a href="#contact" class="hover:text-blue-600">Kontak</a></li>
+            </ul>
+            <div class="hidden md:flex space-x-4">
+                <a href="login.html" target="_blank"
+                    class="px-4 py-2 border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition">Login</a>
+                <a href="registrasi.html" target="_blank"
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Daftar</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero -->
+    <section class="pt-28 pb-16 bg-cover bg-center" style="background-image: url('assets/home.jpg');">
+        <div class="max-w-6xl mx-auto px-6 text-left">
+            <h1 class="text-4xl md:text-5xl font-bold text-white leading-snug fade-up">
+                Rental dan Sewa<br />
+                <span class="text-blue-400">Mobil, Motor dan Sepeda</span>
+            </h1>
+            <p class="text-white/90 mt-4 fade-up">
+                Kami menyediakan berbagai pilihan kendaraan untuk mendukung aktivitas Anda dengan harga terjangkau,
+                layanan cepat, dan kualitas terbaik.
+            </p>
+
+            <!-- Search Box -->
+            <div class="mt-10 flex flex-col md:flex-row items-center justify-between
+                bg-white/30 backdrop-blur-xl border border-white/40
+                rounded-2xl shadow-lg p-5 gap-4 w-full fade-up
+                text-gray-900 transition-all duration-300 hover:bg-white/40">
+            
+                <input id="searchInput" type="text" placeholder="Cari kendaraan atau lokasi sewa" class="flex-1 bg-white/50 border border-white/40 rounded-lg px-4 py-3
+                    placeholder-gray-700 text-gray-900 outline-none focus:ring-2 focus:ring-blue-400 transition" />
+            
+                <select id="vehicleType" class="bg-white/50 border border-white/40 rounded-lg px-4 py-3 text-gray-900
+                    focus:ring-2 focus:ring-blue-400 transition">
+                    <option value="Mobil">Mobil</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Sepeda">Sepeda</option>
+                </select>
+            
+                <button id="searchBtn" type="button" class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg
+                    hover:bg-blue-700 transition">
+                    Cari
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Tentang -->
+    <section id="tentang" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <div class="w-full h-full flex justify-center fade-up">
+                <img src="assets/about.jpeg" alt="Tentang Kami"
+                    class="rounded-2xl shadow-md object-cover w-full h-full md:h-[350px] lg:h-[400px]" />
+            </div>
+            <div class="fade-up flex flex-col justify-center">
+                <h2 class="text-3xl font-semibold mb-4">Tentang Kami</h2>
+                <p class="text-gray-600 mb-4">
+                    Kami adalah tim yang berkomitmen untuk menyediakan layanan sewa kendaraan yang andal, nyaman, dan
+                    terjangkau. Setiap kendaraan kami dirawat dengan baik dan selalu dalam kondisi prima.
+                </p>
+                <a href="#" class="text-blue-600 font-medium hover:underline transition">Read More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proses Penyewaan -->
+    <section class="py-20 bg-blue-50 fade-up">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold mb-3 text-gray-800">Proses Penyewaan</h2>
+            <p class="text-gray-600 mb-12">
+                Pemesanan sewa kendaraan di <span class="font-semibold text-blue-600">Rentify</span> melibatkan
+                proses-proses di bawah ini:
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Langkah 1 -->
+                <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300">
+                    <div class="flex justify-center mb-5">
+                        <div
+                            class="w-16 h-16 rounded-full bg-blue-600/10 flex items-center justify-center border-2 border-dashed border-blue-600">
+                            <img src="assets/icon-tanggal.png" alt="Pilih Tanggal" class="w-8 h-8" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">1. Pilih Tanggal</h3>
+                    <p class="text-sm text-gray-600">
+                        Tentukan tanggal penyewaan kendaraan Anda sesuai jadwal perjalanan, lokasi, dan durasi
+                        penyewaan.
+                    </p>
+                </div>
+
+                <!-- Langkah 2 -->
+                <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300">
+                    <div class="flex justify-center mb-5">
+                        <div
+                            class="w-16 h-16 rounded-full bg-yellow-500/10 flex items-center justify-center border-2 border-dashed border-yellow-500">
+                            <img src="assets/icon-pickup.png" alt="Lokasi Pick-Up" class="w-8 h-8" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">2. Lokasi Pick-Up</h3>
+                    <p class="text-sm text-gray-600">
+                        Pilih lokasi terdekat untuk penjemputan kendaraan agar proses lebih mudah dan cepat.
+                    </p>
+                </div>
+
+                <!-- Langkah 3 -->
+                <div class="bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300">
+                    <div class="flex justify-center mb-5">
+                        <div
+                            class="w-16 h-16 rounded-full bg-gray-800/10 flex items-center justify-center border-2 border-dashed border-gray-800">
+                            <img src="assets/icon-booking.png" alt="Booking" class="w-8 h-8" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">3. Booking</h3>
+                    <p class="text-sm text-gray-600">
+                        Setelah menemukan kendaraan yang sesuai, lanjutkan dengan mengisi data dan melakukan pembayaran.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mengapa Sewa di Rentify -->
+    <section class="relative py-32 bg-white fade-up">
+        <div class="max-w-6xl mx-auto px-6 relative">
+            <!-- Background Image -->
+            <div class="relative rounded-3xl overflow-hidden">
+                <img src="assets/why-bg.jpg" alt="Mengapa Sewa di Rentify" class="w-full h-[380px] object-cover" />
+                <div
+                    class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-3">
+                        Mengapa Sewa di <span class="text-blue-400">Rentify.</span>?
+                    </h2>
+                    <p class="max-w-2xl">
+                        Rentify. adalah perusahaan rental kendaraan terpercaya yang menawarkan servis di berbagai wilayah
+                        Indonesia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Grid Card -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-[-5rem] relative z-20 justify-items-center max-w-5xl mx-auto">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 w-[280px]">
+                    <div
+                        class="w-14 h-14 flex items-center justify-center bg-yellow-400/10 rounded-full mx-auto mb-4 border-2 border-dashed border-yellow-400">
+                        <img src="assets/icon-support.png" alt="Support" class="w-8 h-8" />
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-center text-gray-900">24 Hours Support</h3>
+                    <p class="text-gray-600 text-sm text-center">
+                        Kami akan membantu Anda selama 24 jam penuh.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 w-[280px]">
+                    <div
+                        class="w-14 h-14 flex items-center justify-center bg-yellow-400/10 rounded-full mx-auto mb-4 border-2 border-dashed border-yellow-400">
+                        <img src="assets/icon-assurance.png" alt="Assurance" class="w-8 h-8" />
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-center text-gray-900">Qualified Assurance</h3>
+                    <p class="text-gray-600 text-sm text-center">
+                        Semua kendaraan kami memiliki surat dan izin yang valid.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl shadow-md p-8 hover:-translate-y-2 hover:shadow-xl transition duration-300 w-[280px]">
+                    <div
+                        class="w-14 h-14 flex items-center justify-center bg-yellow-400/10 rounded-full mx-auto mb-4 border-2 border-dashed border-yellow-400">
+                        <img src="assets/icon-gps.png" alt="GPS" class="w-8 h-8" />
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-center text-gray-900">GPS on Cars</h3>
+                    <p class="text-gray-600 text-sm text-center">
+                        Semua kendaraan telah dilengkapi sistem GPS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kendaraan yang Kami Sewakan -->
+    <section class="py-20 bg-gradient-to-r from-blue-50 to-yellow-50 fade-up">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold mb-3 text-gray-800">Kendaraan yang Kami Sewakan</h2>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-10 rounded-full"></div>
+    
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+                <!-- Card Mobil -->
+                <div
+                    class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 w-[280px] p-6 text-left">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl font-bold text-gray-200">01</span>
+                        <div class="bg-blue-600 p-3 rounded-lg">
+                            <img src="assets/icon-car.png" class="text-white" alt="Mobil" class="w-6 h-6 invert" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800">Mobil</h3>
+                    <hr class="border-t border-gray-100 mt-3" />
+                </div>
+    
+                <!-- Card Motor -->
+                <div
+                    class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 w-[280px] p-6 text-left">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl font-bold text-gray-200">02</span>
+                        <div class="bg-yellow-500 p-3 rounded-lg">
+                            <img src="assets/icon-bike.png" class="text-white" alt="Motor" class="w-6 h-6 invert" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800">Motor</h3>
+                    <hr class="border-t border-gray-100 mt-3" />
+                </div>
+    
+                <!-- Card Sepeda -->
+                <div
+                    class="bg-white rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 w-[280px] p-6 text-left">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-3xl font-bold text-gray-200">03</span>
+                        <div class="bg-black p-3 rounded-lg">
+                            <img src="assets/icon-cycle.png" class="text-white" alt="Sepeda" class="w-6 h-6 invert" />
+                        </div>
+                    </div>
+                    <h3 class="font-semibold text-lg text-gray-800">Sepeda</h3>
+                    <hr class="border-t border-gray-100 mt-3" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section class="py-20 bg-gradient-to-b from-white via-blue-50/30 to-blue-100/40 fade-up">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold mb-3 text-gray-800">Apa Kata Client Kami?</h2>
+            <div class="w-24 h-1 bg-yellow-400 mx-auto mb-10 rounded-full"></div>
+
+            <!-- Kartu Review Utama -->
+            <div class="bg-white/60 backdrop-blur-xl border border-white/30 shadow-[0_8px_25px_rgba(0,0,0,0.08)]
+                rounded-3xl p-10 max-w-3xl mx-auto mb-10 transition hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)]">
+                <img src="assets/client1.jpeg" alt="Kairi Risolmayo"
+                    class="w-24 h-24 rounded-full mx-auto border-4 border-blue-500 mb-4 object-cover shadow-lg" />
+                <h3 class="font-semibold text-lg text-gray-800">Kairi Risolmayo</h3>
+
+                <!-- Rating -->
+                <div class="flex justify-center mt-2 mb-4 text-yellow-400">
+                    <template x-for="i in 5">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+                            class="w-5 h-5 mx-1">
+                            <path d="M12 .587l3.668 7.568L24 9.753l-6 5.853L19.335 24 12 19.897 
+                4.665 24 6 15.606 0 9.753l8.332-1.598z" />
+                        </svg>
+                    </template>
+                </div>
+
+                <p class="text-gray-700 leading-relaxed max-w-2xl mx-auto italic">
+                    “Mobilnya bersih, bensinnya full, dan pelayanannya ramah banget.
+                    Semua proses cepat dan mudah. Pasti sewa lagi di sini!”
+                </p>
+            </div>
+
+            <!-- Daftar Client -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Aktif -->
+                <div class="flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-300 text-gray-900 
+                rounded-full px-5 py-2 shadow-md cursor-pointer hover:scale-[1.03] transition">
+                    <img src="assets/client1.jpeg" alt="Kari"
+                        class="w-10 h-10 rounded-full border border-white shadow-sm" />
+                    <div class="text-left">
+                        <p class="font-semibold text-sm leading-tight">Kari Risalmaya</p>
+                        <span class="text-xs opacity-80">30 Juni 2025</span>
+                    </div>
+                </div>
+
+                <!-- Non aktif -->
+                <div class="flex items-center gap-3 bg-white/60 backdrop-blur-lg border border-white/40 
+                rounded-full px-5 py-2 shadow-sm hover:shadow-md hover:bg-white/80 cursor-pointer transition">
+                    <img src="assets/client2.jpg" alt="Schevenko" class="w-10 h-10 rounded-full" />
+                    <div class="text-left">
+                        <p class="font-semibold text-sm leading-tight">Schevenko</p>
+                        <span class="text-xs text-gray-600">20 Juni 2025</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 bg-white/60 backdrop-blur-lg border border-white/40 
+                rounded-full px-5 py-2 shadow-sm hover:shadow-md hover:bg-white/80 cursor-pointer transition">
+                    <img src="assets/client3.jpeg" alt="Gilang Pasep" class="w-10 h-10 rounded-full" />
+                    <div class="text-left">
+                        <p class="font-semibold text-sm leading-tight">Gilang Pasep</p>
+                        <span class="text-xs text-gray-600">20 Juni 2025</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 bg-white/60 backdrop-blur-lg border border-white/40 
+                rounded-full px-5 py-2 shadow-sm hover:shadow-md hover:bg-white/80 cursor-pointer transition">
+                    <img src="assets/client4.jpg" alt="Nicky" class="w-10 h-10 rounded-full" />
+                    <div class="text-left">
+                        <p class="font-semibold text-sm leading-tight">Nicky Fernando</p>
+                        <span class="text-xs text-gray-600">20 Juni 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 bg-gradient-to-b from-blue-100/50 via-blue-50/80 to-white fade-up">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center mb-8 text-gray-800">
+                Pertanyaan yang Sering Diajukan
+            </h2>
+            <div class="space-y-4">
+                <details
+                    class="bg-white/70 backdrop-blur-lg p-5 rounded-xl shadow-sm border border-white/30 transition hover:shadow-md">
+                    <summary class="font-semibold cursor-pointer text-gray-800">
+                        Bagaimana cara rental kendaraan di Rentify?
+                    </summary>
+                    <p class="mt-2 text-gray-600">Cukup pilih kendaraan, isi tanggal dan lokasi, lalu konfirmasi pemesanan.
+                    </p>
+                </details>
+
+                <details
+                    class="bg-white/70 backdrop-blur-lg p-5 rounded-xl shadow-sm border border-white/30 transition hover:shadow-md">
+                    <summary class="font-semibold cursor-pointer text-gray-800">
+                        Apakah tersedia layanan antar-jemput kendaraan?
+                    </summary>
+                    <p class="mt-2 text-gray-600">Ya, kami menyediakan layanan antar-jemput dengan biaya tambahan.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-b from-blue-700 via-blue-800 to-blue-900 text-white py-12 mt-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Rentify</h2>
+                <p class="text-sm mb-1">Customer Support:</p>
+                <p class="text-yellow-400 font-semibold mb-4">(62) 555-7777</p>
+                <p class="text-sm mb-1">Jl. Halimun, Setiabudi, Jakarta Selatan.</p>
+                <a href="mailto:info@rental.com" class="text-sm hover:underline">info@rental.com</a>
+
+                <div class="flex space-x-4 mt-6">
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fas fa-globe text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-twitter text-lg"></i></a>
+                    <a href="#" class="text-white hover:text-gray-300"><i class="fab fa-youtube text-lg"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Perusahaan</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Tentang kami</a></li>
+                    <li><a href="#" class="hover:underline">Blog</a></li>
+                    <li><a href="#" class="hover:underline">Kontak</a></li>
+                    <li><a href="#" class="hover:underline">Harga</a></li>
+                    <li><a href="#" class="hover:underline">Testimoni</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Support</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:underline">Help center</a></li>
+                    <li><a href="#" class="hover:underline">Terms of service</a></li>
+                    <li><a href="#" class="hover:underline">Legal</a></li>
+                    <li><a href="#" class="hover:underline">Privacy policy</a></li>
+                    <li><a href="#" class="hover:underline">Status</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Stay up to date</h3>
+                <form class="relative">
+                    <input type="email" placeholder="Your email address" class="w-full px-5 py-3 pr-14 bg-white/20 backdrop-blur-md border border-white/40
+                    rounded-full text-white placeholder-white/80 focus:outline-none focus:ring-2
+                    focus:ring-white/70 transition" />
+                    <button type="submit" class="absolute inset-y-0 right-0 flex items-center justify-center w-12 bg-white/30
+                    hover:bg-white/50 backdrop-blur-md rounded-r-full transition">
+                        <img src="assets/icon-send.png" alt="Send" class="w-5 h-5 brightness-0 invert">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Scroll Animasi -->
+    <script>
+        const fadeElements = document.querySelectorAll(".fade-up");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add("show");
+            });
+        }, { threshold: 0.1 });
+        fadeElements.forEach(el => observer.observe(el));
+    </script>
+
+    <script>
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            const type = document.getElementById("vehicleType").value;
+            const keyword = document.getElementById("searchInput").value.trim();
+
+            if (keyword === "") {
+                alert("Masukkan kata kunci pencarian terlebih dahulu!");
+                return;
+            }
+
+            // Arahkan ke halaman kendaraan
+            window.location.href = `kendaraan.html?type=${encodeURIComponent(type)}&q=${encodeURIComponent(keyword)}`;
+        });
+    </script>
+
+</body>
+
+</html>
