@@ -50,7 +50,7 @@ Website ini memungkinkan pengguna untuk:
 ---
 
 ### 3. **Backend Developer**  
-**Nama:** Ijul  
+**Nama:** Ijul, Rian, Akmal  
 **Tugas:**  
 - Mengembangkan logika dan koneksi backend  
 - Mengimplementasikan fitur Login, Booking, dan CRUD data kendaraan  
